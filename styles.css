@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: Arial;
+	color: white;
+}
+html, body{
+	height: 100%;
+	background-color: rgb(12 16 19);
+	overflow: hidden;
+}
+
+.container{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+header.header {
+	background-color: rgb(31, 35, 38);
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+header .logo {
+	display: inline-block;
+	content: '';
+	background-image: url("img/chat-logo.svg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 40px;
+	background-size: 100% auto;
+	margin-top: 5px;
+}
+
+header .settings {
+	display: inline-block;
+	content: '';
+	background-image: url("img/settings.svg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 40px;
+	background-size: 100% auto;
+	margin-top: 5px;
+}
+
+.info_user{
+	display: flex;
+	min-width: 100px;
+
+}
+.info_user:before {
+	content: '';
+	display: inline-block;
+	background: url("img/user-photo.png") no-repeat;
+	height: 100%;
+	width: 40px;
+	background-size: 100% auto;
+	margin-top: 5px;
+
+}
+.user-name{
+	font-size: 15px;
+	margin: 15px 0 0 10px;
+}
+
+main {
+	flex: 1 1 auto;
+	display: flex;
+}
+
+footer.footer{
+	height: 100px;
+	background-color: rgb(31, 35, 38);
+	display: flex;
+	justify-content: center;
+}
+
+.chat_body {
+	width: 100%;
+	height: 100%;
+}
+
+.chat_online {
+	overflow: hidden;
+	float: left;
+	min-width: 200px;
+	border-right: 0.5px solid rgb(34,39,41);
+	background-color: rgb(16,21,25);
+}
+
+.search_online {
+	height: 30px;
+	border-bottom: 1px solid rgb(27,34,38);
+	background-color: rgb(16,21,25);
+	padding: 4px 5px;
+}
+
+.search_online input[type="text"] {
+	outline: none;
+	height: 30px;
+	width: 100%;
+	border-radius: 20px;
+	text-indent: 2em;
+	border: 0;
+	background-color: rgb(38,42,43);
+}
+
+.online_friend{
+	max-height: calc(100vh - 150px - 30px); /*вычитаем header, footer и поиск*/
+	overflow: auto;
+}
+
+.online_friend ul li {
+	list-style-type: none;
+	height: 60px;
+	border-bottom: 1px solid #1c1f21;
+	position: relative;
+}
+
+.a_friend {
+	position: relative;
+}
+
+.head_portrait {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin: 10px 0 0 10px;
+	border-radius: 50%;
+	/*Или эта конструкция по умолчанию:*/
+	/*background: #f11a1a;*/
+	/*Или эта:*/
+	background: url("img/user-photo.png") no-repeat;
+	background-size: 100% auto;
+	content: '';
+}
+/*В данных случаях использовано */
+/*абсолютное позиционирование */
+/*относительно родительского */
+/*элемента с фиксированной */
+/*минимальной шириной:*/
+.friend{
+	display: inline-block;
+	position: absolute;
+	right: 80px;
+	top: 50%;
+}
+.name{
+	position: absolute;
+	top: 22px;
+	left: 70px;
+	font-size: 15px;
+}
+
+.this_time{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	color: rgb(153,155,156);
+}
+
+.chat_main{
+	width: 100%;
+	height: 100%;
+	max-height: calc(100vh - 150px); /*Вычитаем из высоты экрана устройства footer и header */
+	position: relative;
+	overflow: auto;
+}
+
+.send_message{
+	margin: auto;
+	width: 100%;
+	padding: 20px;
+}
+
+form{
+	position: relative;
+}
+
+.send_message #send_txt{
+	outline: none;
+	background: rgb(38,42,45);
+	width: calc(100% - 100px);
+	height: 20px;
+	padding: 10px;
+	border: 0;
+	border-radius: 20px 0 0 20px;
+}
+
+input#send_btn {
+	outline: none;
+	border: 1px solid #777;
+	background: #6e9e2d;
+	color: #fff;
+	font: bold 11px 'Trebuchet MS';
+	padding: 4px;
+	cursor: pointer;
+	-moz-border-radius: 0 20px 20px 0;
+	-webkit-border-radius: 0 20px 20px 0;
+	height: 40px;
+	padding: 10px;
+	position: absolute;
+}
+
+input#send_btn:active {
+	background: #82b83c;
+}
+
+ul#chat_ul li {
+	list-style-type: none;
+	overflow: hidden;
+}
+li .message {
+	max-width: 150px;
+	min-width: 100px;
+	background: rgb(28, 34, 37);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-top-left-radius: 0px;
+	padding: 4px;
+	padding-left: 12px;
+	margin: 40px;
+	position: relative;
+}
+
+li .message.from_user{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 0px;
+	float: right;
+}
+
+li .message:not(.from_user):before {
+	content: "";
+	position: absolute;
+	right: 100%;
+	width: 0;
+	height: 0;
+	top: 0;
+	border-top: 0px solid transparent;
+	border-right: 27px solid rgb(28, 34, 37);
+	border-bottom: 24px solid rgb(12,16,19);
+}
+
+li .message.from_user:after {
+	content: "";
+	position: absolute;
+	left: 100%;
+	width: 0;
+	height: 0;
+	top: 0;
+	border-top: 0px solid transparent;
+	border-left: 27px solid rgb(28, 34, 37);
+	border-bottom: 24px solid rgb(12,16,19);
+}
+
+li .message .message__author {
+	color: rgb(49, 198, 132);
+	font-weight: 700;
+}

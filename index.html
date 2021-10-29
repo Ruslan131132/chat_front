@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Chat</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles.css">
+<!--		<script src="jquery-3.6.0.js"></script>-->
+<!--		<script src="script.js"></script>-->
+	</head>
+	<body>
+	<div class="container">
+		<header class="header">
+			<div class="logo"></div>
+			<div class="info_user">
+				<div class="user-name" id="user-name">Пользователь</div>
+			</div>
+			<div class="settings"></div>
+		</header>
+		<main class="chat_body">
+			<!-- - Список контактов --->
+			<div class="chat_online">
+				<!-- - Поиск --->
+				<div class="search_online">
+					<form>
+						<input type="text" placeholder="поиск контактов">
+					</form>
+				</div>
+				<div class="online_friend">
+					<ul>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 1 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 2 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 3 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 4 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 5 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 6 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 7 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 8 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 9 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 10 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 11 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+						<li>
+							<div class="a_friend">
+								<div class="head_portrait"></div>
+								<div class="name"> Друг 12 </div>
+								<div class="this_time">4-12-15:10</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- - Интерфейс чата --->
+			<div class="chat_main" style="overflow: scroll">
+				<div class="chat_div" style="overflow: scroll">
+					<ul id="chat_ul" class="chat_content" style="overflow: scroll">
+						<li>
+							<div class="message">
+								<p class="message__author">Саша Печкин</p>
+								<p class="messge__text">Привет!</p>
+							</div>
+						</li>
+						<li>
+							<div class="message from_user">
+								<p class="message__author">Пользователь</p>
+								<p class="messge__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div class="message from_user">
+								<p class="message__author">Пользователь</p>
+								<p class="messge__text">
+									Ut enim ad minim veniam,
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="message from_user">
+								<p class="message__author">Пользователь</p>
+								<p class="messge__text">
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="message from_user">
+								<p class="message__author">Пользователь</p>
+								<p class="messge__text">
+									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="message from_user">
+								<p class="message__author">Пользователь</p>
+								<p class="messge__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</main>
+
+		<footer class="footer">
+			<div class="send_message">
+				<form>
+					<input type="text" placeholder="Введите сообщение" id="send_txt">
+					<input type="button" value="Отправить" id="send_btn">
+				</form>
+			</div>
+		</footer>
+	</div>
+	</body>
+</html>
